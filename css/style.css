@@ -148,12 +148,15 @@ color: var(--accent-color);}
 
 .auth-nav{
 display: flex;
+align-items: center;
 }
+
 .auth-nav .item+ .item{
-margin-left: 50px;}
+margin-left: 30px;
+}
 
 .auth-nav a{
-display: block;
+display: flex;
 padding-top: 32px;
 padding-bottom: 32px;
 
@@ -168,6 +171,20 @@ text-decoration: none;
 .auth-nav a:focus{
 color: var(--accent-color);
 }
+
+.contact-list:hover .contact-icon{
+fill: var(--accent-color);
+}
+
+.contact-list{
+    align-items: center;
+}
+
+.contact-icon{
+justify-content: center;
+align-items: center;
+margin-right: 10px;
+fill: var(--primary-text-color);}
 
 /* ГЕРОЙ */
 
@@ -248,39 +265,30 @@ padding: 94px 0;
 display: flex;
 }
 
-.features .item{
-width: 270px;
-margin-left: auto;
-margin-right: auto;
+
+.icon-features{
+    width: 70px;
+    height: 70px;
+    margin: 25px 100px 55px 100px;
 }
 
-.features .item::before{
+
+.features .item{
 display: block;
-content: '';
+
 height: 120px;
-background-color: #F5F4FA;
+width: 270px;
+background-color: var(--section-bgc-grey);
 border-radius: 4px;
 margin-bottom: 30px;   
 background-repeat: no-repeat;
 background-position: center;
-
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
 }
 
-.icon-antenna::before{
-background-image: url('/images/antenna.svg');
-}
-
-.icon-clock::before{
-background-image: url('/images/clock.svg');
-}
-
-.icon-diagram::before{
-background-image: url('/images/diagram.svg');
-}
-
-.icon-astronaut::before{
-background-image: url('/images/astronaut.svg');
-}
 
 .features .item+ .item{
 margin-left: 30px;
@@ -351,6 +359,7 @@ border-radius: 0px 0px 4px 4px;
 
 background-color: var(--primery-white-color);
 }
+
 .team .element-team+.element-team{
     margin-left: 30px;
 }
@@ -373,25 +382,79 @@ text-align: center;
 margin-bottom: 0px;
 }
 
-/* Клиенты */
+.social-list-team{
+display: flex;
+justify-content: center;
+margin-top: 16px;
+}
 
-.client {
+.social-list-team .social-link-team+.social-link-team {
+    margin-left: 10px;
+}
+
+.social-logo-team {
+    width: 20px;
+    height: 20px;
+    
+}
+
+.area-icon-team {
     display: flex;
-    margin-top: 50px;
+    width: 44px;
+    height: 44px;
+    background: var(--primery-white-color);
+    border-radius: 50%;
+    background-size: 20px;
+    justify-content: center;
+    align-items: center;
+    fill: #AFB1B8;
+}
+
+.area-icon-team:hover{
+background: var(--accent-color);
+fill: var(--primery-white-color);
 }
 
 
-.client .item{
+/* Клиенты */
+
+
+
+.client-list{
+display: flex;
+margin-top: 50px;
+margin-bottom: 0px;
+padding: 0px;
+}
+
+.client-list .client+.client{
+margin-left: 30px;
+}
+
+.item-client{
+display: flex;
 width: 170px;
 height: 92px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    fill: #AFB1B8;
 }
-.client .item+ .item{
-margin-left: 30px;
+
+
+.client-logo{
+width: 106px;
+height: 60px;
+
 }
+
+.item-client:hover{
+border:1px solid var(--accent-color);
+fill: var(--accent-color);}
+
 
 /* Подвал */
 
@@ -399,6 +462,10 @@ margin-left: 30px;
 .footer{
 padding: 60px 0;
 background-color: var(--secondery-bgc-black);
+}
+.container.footer-list{
+display: flex;
+align-items: flex-start;
 }
 
 .map{
@@ -440,15 +507,52 @@ text-decoration: none;
 margin-top: 9px;}
 
 .socials-title{
+margin-bottom: 20px;
 font-weight: 700;
 text-transform: uppercase;
 
 color: #FFFFFF;
 }
 
-.social{
+.socials{
 display: flex;
+flex-direction: column;
+margin-left: 70px;
+margin-top: 12px;
 }
+
+.social-list{
+display: flex;
+
+}
+.social-list .social-link+.social-link{
+margin-left: 10px;
+}
+
+.social-logo{
+width: 20px;
+height: 20px;
+fill: var(--primery-white-color);
+}
+
+.social-link{
+    display: flex;
+width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    background-size: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-icon{
+display: flex;}
+
+.social-link:hover{
+background: var(--accent-color);
+}
+
 
 /* portfolio */
 
